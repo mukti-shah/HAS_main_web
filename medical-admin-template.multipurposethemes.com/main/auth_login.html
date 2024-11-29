@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from medical-admin-template.multipurposethemes.com/main/auth_login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Aug 2024 15:15:31 GMT -->
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://medical-admin-template.multipurposethemes.com/images/favicon.ico">
+
+    <title>Doclinic - Log in </title>
+  
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="css/vendors_css.css">
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/skin_color.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.css">	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+
+</head>
+	
+<body class="hold-transition theme-primary bg-img" style="background-image: url(../images/auth-bg/bg-1.jpg)">
+	
+	<div class="container h-p100">
+		<div class="row align-items-center justify-content-md-center h-p100">	
+			
+			<div class="col-12">
+				<div class="row justify-content-center g-0">
+					<div class="col-lg-5 col-md-5 col-12">
+						<div class="bg-white rounded10 shadow-lg">
+							<div class="content-top-agile p-20 pb-0">
+								<h2 class="text-primary">Let's Get Started</h2>
+								<p class="mb-0">Sign in to continue to Doclinic.</p>							
+							</div>
+							<div class="p-40">
+								<form id="loginForm" onsubmit="return validateCredentials()">
+									<div class="form-group">
+										<div class="input-group mb-3">
+											<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
+											<input type="text" class="form-control ps-15 bg-transparent" id="username" placeholder="Username">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group mb-3">
+											<span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
+											<input type="password" class="form-control ps-15 bg-transparent" placeholder="Password" id="password">
+										</div>
+									</div>
+									  <div class="row">
+										<div class="col-6">
+										  <div class="checkbox">
+											<input type="checkbox" id="basic_checkbox_1" >
+											<label for="basic_checkbox_1">Remember Me</label>
+										  </div>
+										</div>
+										<!-- /.col -->
+										<div class="col-6">
+										 <div class="fog-pwd text-end">
+											<a href="javascript:void(0)" class="hover-warning"><i class="ion ion-locked"></i> Forgot password?</a><br>
+										  </div>
+										</div>
+										<!-- /.col -->
+										<div class="col-12 text-center">
+										  <button type="submit" class="btn btn-danger mt-10">SIGN IN</button>
+										</div>
+										<!-- /.col -->
+									  </div>
+								</form>	
+								<script>
+									function validateCredentials() {
+										// Get the values from the form
+										var username = document.getElementById('username').value;
+										var password = document.getElementById('password').value;
+							
+										// Simple check (for demonstration purposes)
+										if (username === "admin" && password === "admin") {
+											window.location.href = "dashboard_admin.html"; // Redirect to Admin Dashboard
+										} else if (username === "user" && password === "user") {
+											window.location.href = "patient_dashboard.html"; // Redirect to User Dashboard
+										} else if (username === "staff" && password === "staff") {
+											window.location.href = "doctor_dashboard.html"; // Redirect to User Dashboard
+										} else {
+											alert("Invalid credentials!");
+											return false; // Prevent form submission
+										}
+										return false; // Prevent form submission for client-side redirection
+									}
+								</script>
+								<div class="text-center">
+									<p class="mt-15 mb-0">Don't have an account? <a href="auth_register.html" class="text-warning ms-5">Sign Up</a></p>
+								</div>	
+							</div>						
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Vendor JS -->
+	<script src="js/vendors.min.js"></script>
+	<script src="js/pages/chat-popup.js"></script>
+    <script src="../assets/icons/feather-icons/feather.min.js"></script>	
+
+</body>
+
+<!-- Mirrored from medical-admin-template.multipurposethemes.com/main/auth_login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Aug 2024 15:15:31 GMT -->
+</html>
